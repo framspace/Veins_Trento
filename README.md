@@ -9,7 +9,7 @@
 * [Eseguire la simulazione](#eseguire-la-simulazione)
 * [Visualizzare i risultati](#visualizzare-i-risultati)
 * [Troubleshooting](#troubleshooting)
-* [Link utili](link-utili)
+* [Link utili](#link-utili)
 &nbsp;
 
 ## Ecosistema
@@ -18,19 +18,19 @@ Il file `Progetto_Trento_Veins.zip` è un progetto Omnet che andrà importato su
 
 Se si possiede già l'ecosistema di software necessario (SUMO, OMNeT++, INET, Veins) basta importare il progetto come descritto in seguito.
 
-Se non si hanno già i vari software installati il modo più rapido per aprirlo è scaricare la virtual machine "Instant Veins" dal sito ufficiale: http://veins.car2x.org/download/
+Se non si hanno già i vari software installati, il modo più rapido per aprirlo è scaricare la virtual machine "Instant Veins" dal sito ufficiale: http://veins.car2x.org/download/
 
 Istant Veins è una virtual machine che comprende al suo interno tutti i software necessari, funzionanti con delle impostazioni predefinite.
 
 Il progetto è stato testato per la versione `5.2-i1`
 
 ## Importare il progetto
-Accendere la Virtual Machine (ad esempio con Virtualbox), e importare al suo interno il file .zip del progetto.
+Accendere la Virtual Machine (ad esempio con [Virtualbox](https://www.virtualbox.org/wiki/Downloads)), e importare al suo interno il file .zip del progetto.
 Per evitare errori di esecuzione, il file va inserito nella directory home/src, dove si trovano gli altri progetti predefiniti.
 
-Sempre nel menù `Activities` si trovano Omnet e il demone veins-launchd, vanno eseguiti entrambi.
+Sempre nel menù `Activities` si trovano `Omnet` e il demone `veins-launchd`, vanno eseguiti entrambi.
 
-Una volta in Omnet, sulla scheda a sinistra troveremo i vari progetti predefiniti, importiamo il nostro con `click destro -> import`
+Una volta in Omnet, sulla scheda a sinistra troveremo i vari progetti predefiniti, manteniamoli e importiamo il nostro con `click destro -> import`
 
 Dal menù selezioniamo `General` e poi `Existing Projects into Workspace`
 
@@ -38,7 +38,7 @@ Nel prossimo menù selezioniamo `Select archive file`, `Browse` e selezioniamo i
 
 A questo punto il progetto dovrebbe essere stato importato correttamente, e le impostazioni personalizzate mantenute.
 
-Al progetto mancano i file .h e .cc della definizione dei messaggi, questo è voluto per evitare problemi di compatibilità tra versioni diverse. Verrano generati automaticamente appena verrà eseguita la build del progetto.
+> Al progetto mancano i file .h e .cc della definizione dei messaggi, questo è voluto per evitare problemi di compatibilità tra versioni diverse. Verrano generati automaticamente appena verrà eseguita la build del progetto.
 
 Se si riscontrano problemi con il linker o il gestore dei messaggi, leggere la sezione finale di questo readme: `Troubleshooting`
 
@@ -48,7 +48,7 @@ Il progetto contiene varie cartelle, quelle importanti sono tre: `Simulations`, 
 
 La cartella Src contiene i file C++ del progetto, in particolare contiene `VeinsInetSampleApplication.cc\/.h` e `VeinsInetSampleMessage.msg`
 
-La cartella Simulations contiene una sottocartella chiamata "simulazione" contenente tutti i file sumo e i file di impostazione della simulazione.
+La cartella Simulations contiene una sottocartella chiamata `simulazione` contenente tutti i file sumo e i file di impostazione della simulazione.
 
 La cartella Results conterrà i file di risultato ottenuti al termine della simulazione.
 
@@ -67,6 +67,7 @@ Per eseguire la simulazione entrare nella cartella `Simulations`, poi in `simula
 
 Questo aprirà un'IDE di simulazione, in alto a sinistra ci sono i comandi temporali per eseguirla, per ottenere il risultato alla massima velocità utilizzare `Express`.
 
+Il run dovrebbe eseguire la build del progetto automaticamente, nel caso servisse eseguire solo la build basta `click destro -> Build project`
 ## Visualizzare i risultati
 Una volta terminata la simulazione, saranno stati generati dei file nella cartella `Results`, sempre sotto `Simulazione`.
 
